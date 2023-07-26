@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    请联系微信： <span style="font-size: 16px;color:red;" id="wechat"></span>
+</body>
+
+</html>
+<script>
+    let arr = [
+            'LX001',
+            'LX002',
+            'LX003',
+            'LX004',
+            'LX005',
+            'LX006',
+        ]
+        // arr里面存着所有想要随机选出的微信号
+    document.getElementById('wechat').innerHTML = arr[0] // 默认显示第一个微信号
+    let index = Math.floor(Math.random() * arr.length)
+    document.getElementById('wechat').innerHTML = arr[index]
+
+    console.log();
+</script>

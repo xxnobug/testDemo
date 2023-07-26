@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="./pyscript.css" />
+    <script defer src="./pyscript.js"></script>
+</head>
+
+<body> <py-script>
+    
+    file0 = open("a.txt", "r")
+    content = file0.read()
+    print(type(content))  # <class 'str'>
+    print(content)
+    file0.close()
+
+   </py-script> </body>
+
+</html>

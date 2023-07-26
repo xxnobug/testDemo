@@ -1,0 +1,1515 @@
+@charset "UTF-8";
+
+/* 字体颜色 b1b1b1  2d8ceb
+字体选中颜色 2d8ceb
+背景颜色	#161616 #212121  232323  454545
+边框颜色 313131
+ */
+.shuaxin {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: 9999;
+}
+
+.img_box {
+	width: 100%;
+}
+
+.roleList:hover {
+	background-color: #161616;
+}
+
+/* //滚动条的宽度 */
+.your-table .el-table__body-wrapper::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+/* //滚动条的滑块 */
+.your-table .el-table__body-wrapper::-webkit-scrollbar-thumb {
+	background-color: #313131;
+	border-radius: 8px;
+}
+
+/* 如果是整个页面的滚动条风格是一致的，直接改全局的滚动条样式也可以有效果
+//滚动条的宽度 */
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+/* //滚动条的滑块 */
+::-webkit-scrollbar-thumb {
+	background-color: #313131;
+	border-radius: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+HTML,
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+li,
+dt,
+dd,
+p,
+blockquote,
+pre,
+form,
+fieldset,
+table,
+th,
+td {
+	border: none;
+	font-family: "微软雅黑", "黑体", "宋体" !important;
+	font-size: 14px;
+	margin: 0px;
+	padding: 0px;
+	color: #b1b1b1;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+}
+
+/* address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+	font-style: normal;
+	font-weight: normal;
+} */
+
+a {
+	text-decoration: none;
+}
+
+a:link {
+	color: #fff;
+}
+
+a:visited {
+	color: #fff;
+}
+
+a:hover {
+	color: #fff;
+}
+
+a:active {
+	color: #fff;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+input::-ms-reveal {
+	display: none;
+}
+
+input {
+	-webkit-appearance: none;
+	margin: 0;
+	outline: none;
+	padding: 0;
+}
+
+input::-webkit-input-placeholder {
+	color: #ccc;
+}
+
+input::-ms-input-placeholder {
+	color: #ccc;
+}
+
+input::-moz-placeholder {
+	color: #ccc;
+}
+
+input[type=submit],
+input[type=button] {
+	cursor: pointer;
+}
+
+button[disabled],
+input[disabled] {
+	cursor: default;
+}
+
+img {
+	border: none;
+}
+
+ul,
+ol,
+li {
+	list-style-type: none;
+}
+
+/*公共方法*/
+.clear {
+	clear: both;
+}
+
+.clearleft {
+	clear: left;
+}
+
+.clearright {
+	clear: right;
+}
+
+.floatleft {
+	float: left;
+}
+
+.floatright {
+	float: right;
+}
+
+.cursor {
+	cursor: pointer;
+}
+
+/*背景及色值表*/
+.bg000 {
+	background: #000;
+}
+
+.color000 {
+	color: #000;
+}
+
+
+/* 框架样式修正 */
+body {
+	background-color: #232323;
+}
+
+.el-input__inner {
+	background-color: #232323;
+	border: 1px solid #b1b1b1;
+	color: #b1b1b1;
+}
+
+.el-input__inner:hover {
+	border-color: #313131;
+	background-color: #161616;
+}
+
+.el-input__inner:focus {
+	border-color: #313131;
+	background-color: #161616;
+}
+
+.el-button--primary {
+	background-color: #232323;
+	border-color: #b1b1b1
+}
+
+.el-button--primary:hover {
+	border-color: #313131;
+	background-color: #2c2c2c;
+	color: #2d8ceb;
+}
+
+.el-button--primary:focus {
+	border-color: #313131;
+	background-color: #161616;
+	color: #2d8ceb;
+}
+
+.el-dialog__body {
+	padding: 10px 20px;
+}
+
+.el-dialog__header {
+	padding: 10px 20px;
+}
+
+.el-dialog__title {
+	color: #B1B1B1;
+}
+
+.el-form-item {
+	margin-bottom: 10px;
+}
+
+.el-form-item__error {
+	padding-top: 0px;
+}
+
+.el-loading-mask {
+	background-color: rgba(33, 33, 33, .9);
+}
+
+.el-message-box__title {
+	color: #B1B1B1;
+}
+.tgycContextMenu .Submenu_menu_item_1HP51 {
+	line-height: 26px;
+	color: #333333;
+}
+
+
+
+/* 登录页样式 */
+.logoBox {
+	width: 64px;
+	height: 64px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+
+.loginBox {
+	width: 240px;
+	height: 240px;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin-left: -120px;
+	margin-top: -120px
+}
+.loginBox .el-form-item__content{line-height: 24px;}
+.loginList {
+	margin: 7px 0;
+}
+
+.loginList .el-button {
+	width: 100%;
+}
+
+/* 全局css */
+.tgycBox {
+	width: 100%;
+
+}
+
+.tgycBoxTop {
+	width: 100%;
+	height: 70px;
+	background-color: #232323;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 999;
+	/* border-bottom: solid 1px #b1b1b1; */
+}
+
+.tgycLogoBox {
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	left: 10px;
+	top: 5px;
+}
+
+.tgycLogoBox img {
+	width: 25px;
+	height: 25px;
+	display: block;
+}
+
+.tgycUserBox {
+	/* width: 200px; */
+	padding-right: 10px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.sysFileManageBox{
+	position: absolute;left: 0px;top: 0;line-height: 39px;
+}
+
+.sysFileManageTipBox{
+	position: absolute;right: 165px;top: 12px;padding-left: 26px;width: 180px;
+}
+.sysFileManageTip{
+	position: relative;width:50px;height: 18px;border: solid 1px #b1b1b1;float: right;border-radius: 10px;font-size:12px ;line-height:18px;text-align: center;margin: 0 3px;
+}
+.sysFileManageTipRed{
+	position: relative;width:50px;height: 18px;border: solid 1px #EA2E9D;color: #EA2E9D;float: right;border-radius: 10px;font-size:12px ;line-height:18px;text-align: center;margin: 0 3px;
+}
+.sysFileManageTipLoading{position: absolute;left: -3px;top: -5px;background-color: #161616;color: #fff;border-radius: 10px;}
+
+
+
+
+
+.sysJumpResManage .el-switch__core{height: 14px;}
+.sysJumpResManage .el-switch.is-checked .el-switch__core::after{margin-left: -14px;}
+.sysJumpResManage .el-switch__core:after{top: 0;width: 12px;height: 12px;}
+.sysJumpResManage{
+	position: absolute;right: 10px;top: 0;padding-left: 50px;
+}
+.sysDownTrackManage{
+	position: absolute;right: 45px;top: 0;padding-left: 26px;
+}
+.sysDownManage{
+	position: absolute;right: 75px;top: 0;padding-left: 26px;
+}
+.sysSearchManage{
+	position: absolute;right: 105px;top: 0;padding-left: 26px;
+}
+
+.sysLinkFile{
+	position: absolute;right: 135px;top: 0;padding-left: 26px;
+}
+
+.sysSearchManageIcon{position: absolute;left: 0;top:11px ;width: 22px;height: 22px;}
+.sysSearchManageIcon img{display: block;width: 100%;}
+
+.sysFileManage{
+	position: absolute;right: 165px;top: 0;padding-left: 26px;
+}
+.sysFileManageCount{line-height: 44px;}
+
+.sysFileManageIcon{position: absolute;left: 0;top:14px ;width: 21px;height: 15px;}
+.sysFileManageIcon img{display: block;}
+
+.tgycNavBox {
+	padding-left: 40px;
+	padding-right: 110px;
+}
+
+.tgycNavBox .el-tabs__item {
+	color: #B1B1B1;
+	padding: 0 7px;
+}
+
+.tgycNavBox .el-tabs--card>.el-tabs__header .el-tabs__nav {
+	border: none;
+	border-radius: 0
+}
+
+.tgycNavBox .el-tabs--card>.el-tabs__header {
+	border: none;
+}
+
+.tgycNavBox .el-tabs--card>.el-tabs__header .el-tabs__item.is-active {
+	border: none;
+	color: #2d8ceb;
+	/* font-weight: bold; */
+}
+
+.tgycNavBox .el-tabs__header {
+	margin: 0;
+}
+
+.tgycSubNav {
+	padding: 0 20px;
+	background-color: #212121;
+	border-bottom: solid 1px #313131;
+	border-top: solid 1px #313131;
+}
+
+.el-tabs--card>.el-tabs__header {
+	border: none;
+}
+
+.tgycSubNav .el-tabs__header {
+	margin: 0;
+}
+
+.el-tabs--card>.el-tabs__header .el-tabs__nav {
+	border: none;
+}
+
+.tgycSubNav .el-tabs__item {
+	padding: 0 5px;
+	height: 30px;
+	line-height: 30px;
+	color: #b1b1b1;
+}
+
+.tgycSubNav .el-tabs__item.is-active {
+	color: #409EFF;
+}
+
+.tgycSubNav .el-tabs--card>.el-tabs__header .el-tabs__item.is-active.is-closable {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.tgycSubNav .el-tabs--card>.el-tabs__header .el-tabs__item {
+	border: none;
+}
+
+.el-tabs__nav-next,
+.el-tabs__nav-prev {
+	height: 30px;
+	line-height: 30px;
+}
+
+.tgycSubNav .el-tabs__item:hover {
+	color: #409EFF;
+	cursor: pointer
+}
+
+.tgycNavBox .el-tabs--card>.el-tabs__header .el-tabs__item {
+	border: none;
+}
+
+.tgycNavBox .el-tabs--bottom .el-tabs--left>.el-tabs__header .el-tabs__item:nth-child(2),
+.el-tabs--bottom .el-tabs--right>.el-tabs__header .el-tabs__item:nth-child(2),
+.el-tabs--bottom.el-tabs--border-card>.el-tabs__header .el-tabs__item:nth-child(2),
+.el-tabs--bottom.el-tabs--card>.el-tabs__header .el-tabs__item:nth-child(2),
+.el-tabs--top .el-tabs--left>.el-tabs__header .el-tabs__item:nth-child(2),
+.el-tabs--top .el-tabs--right>.el-tabs__header .el-tabs__item:nth-child(2),
+.el-tabs--top.el-tabs--border-card>.el-tabs__header .el-tabs__item:nth-child(2),
+.el-tabs--top.el-tabs--card>.el-tabs__header .el-tabs__item:nth-child(2) {
+	padding-left: 7px;
+}
+
+.tgycNavBox .el-tabs__nav-next,
+.el-tabs__nav-prev {
+	color: #B1B1B1;
+}
+
+.tgycUserBox .el-dropdown {
+	color: #B1B1B1;
+	line-height: 34px;
+	padding-top: 5px;
+}
+
+.tgycContent {
+	width: 100%;
+	padding-top: 70px;
+}
+
+.tgycContentP {
+	padding: 10px 15px;
+}
+
+.projectListBox {
+	padding: 0 10px;
+	min-height: 300px;
+}
+
+.projectListCard {
+	padding: 5px;
+}
+
+/* .projectListCardP:hover{border: solid 1px #B1B1B1;} */
+.projectListImg {
+	width: 100%;
+	height: auto;
+}
+
+.projectListImg img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.projectListName {
+	color: #b1b1b1;
+	font-size: 12px;
+	line-height: 26px;
+	height: 26px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	padding-right: 15px;
+}
+
+
+.taskListBox {
+	/* padding: 0 10px; */
+}
+
+.taskListCard {
+	padding: 5px;
+	position: relative;
+}
+
+.taskListImg {
+	width: 100%;
+	height: auto;
+}
+
+.taskListImg img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.taskListName {
+	color: #b1b1b1;
+	font-size: 12px;
+	line-height: 24px;
+	height: 24px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	padding-right: 15px;
+}
+
+.taskBox {
+	position: relative;
+	height: 100px;
+}
+
+.taskDataBox {
+	padding-left: 170px;
+	position: relative;
+}
+
+.taskThum {
+	width: 160px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 2;
+}
+
+.taskThum img {
+	width: 160px;
+	display: block;
+}
+
+.taskName {
+	font-size: 14px;
+	line-height: 26px;
+	color: #2d8ceb;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.taskTxt {
+	line-height: 24px;
+	height: 24px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.taskTxtContent{
+	line-height: 24px;
+	height: 24px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.taskFileHeader {
+	font-size: 12px;
+	line-height: 28px;
+	color: #B1B1B1;
+	position: relative;
+}
+
+.taskFileHeaderInput {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.taskFileListBox {
+	padding: 0 10px;
+}
+
+.taskFileListCard {
+	padding: 5px;
+}
+
+.taskFileListImg {
+	width: 100%;
+	height: auto;
+	position: relative;
+}
+
+.taskFileListTip {}
+
+.taskFileListImg img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.taskFileListName {
+	color: #b1b1b1;
+	font-size: 12px;
+	line-height: 24px;
+	height: 24px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	padding-right: 15px;
+}
+
+.taskFileBox {
+	margin-top: 10px;
+}
+
+.addProjectBox {
+	padding: 20px;
+}
+
+.projectThum {
+	width: 200px;
+	position: relative;
+}
+
+.projectThum img {
+	width: 200px;
+	display: block;
+}
+
+.CropperBtns {
+	margin-top: 10px;
+	text-align: center;
+}
+
+.projectThumUpload {
+	position: absolute;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 10;
+}
+
+
+
+.projectListName .el-input--small .el-input__inner {
+	line-height: 24px;
+	height: 24px;
+}
+
+.projectThumUpload2 {
+	display: none
+}
+
+.TaskDialogBox {
+	padding: 0 15px;
+}
+
+.TaskDialogBox .el-select {
+	width: 100%;
+}
+
+
+.roleTitle {
+	font-size: 16px;
+	line-height: 30px;
+	color: #B1B1B1;
+	margin-bottom: 15px;
+}
+
+.roleList {
+	padding: 8px 0;
+	border-bottom: solid 1px #313131;
+}
+
+.roleTag {
+	background: none;
+	margin: 2px 5px;
+	border: solid 1px #B1B1B1;
+	line-height: 22px;
+	height: 24px;
+	padding: 0 5px;
+}
+
+.el-tag .el-icon-close {
+	right: 0 !important;
+}
+
+.roleTagAdd {
+	height: 24px;
+	line-height: 22px;
+	color: #B1B1B1;
+	padding: 0 5px;
+}
+
+.roleTaginput {
+	width: 90px;
+	margin-left: 0px;
+	height: 22px;
+}
+
+.roleTaginput .el-input__inner {
+	height: 24px;
+	padding: 0 5px;
+	line-height: 24px;
+	font-size: 12px;
+}
+
+.roleTaginput .el-input__icon {
+	line-height: 24px;
+	font-size: 12px;
+
+}
+
+.roleUserBoxStyle .el-transfer__buttons {
+	width: 30px;
+	padding: 2px;
+}
+
+.roleUserBoxStyle .el-button {
+	padding: 5px;
+	margin-left: 2px;
+}
+
+.taskListlockBox {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 24px;
+	height: 24px;
+	background-color: #cb1a1c;
+	color: #FFFFFF;
+	font-weight: bold;
+	text-align: center;
+	line-height: 24px;
+	border-bottom-left-radius: 50%;
+	border-bottom-right-radius: 50%;
+	padding: 0;
+	margin: 0;
+}
+
+.taskListCardP {
+	position: relative;
+}
+
+.taskLogList {
+	border-bottom: solid 1px #B1B1B1;
+	padding: 5px 0;
+}
+
+.taskLogUserBox {
+	position: relative;
+	padding-left: 40px;
+	font-size: 12px;
+	line-height: 30px;
+	color: #B1B1B1;
+}
+
+.taskLogUserThum {
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.taskLogUserThum img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.taskLogAddTime {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.taskLogContent {
+	padding: 5px;
+}
+
+.taskLogAddTime {
+	font-size: 12px;
+
+}
+
+.taskLogPageBox {
+	margin-top: 10px;
+}
+
+.tasklockBox {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 24px;
+	height: 24px;
+	background-color: #cb1a1c;
+	color: #FFFFFF;
+	font-weight: bold;
+	text-align: center;
+	line-height: 24px;
+	border-bottom-left-radius: 50%;
+	border-bottom-right-radius: 50%;
+	padding: 0;
+	margin: 0;
+	z-index: 3;
+}
+
+.taskState {
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 24px;
+}
+
+.videoBox {
+	width: 100%;
+	height: 350px;
+	/* background-color: #2D8CEB; */
+}
+
+.resourcesIntroduction {
+	width: 100%;
+	padding: 5px 0;
+}
+
+.resourcesName {
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 24px;
+	color: #2d8ceb;
+	position: relative;
+	padding-left: 20px;
+}
+
+.resourcesPath {
+	font-size: 12px;
+	line-height: 24px;
+	color: #666666;
+	position: relative;
+}
+/* .resourcesTxt{
+	font-size: 12px;
+	line-height:20px;
+	color: #B1B1B1;
+	margin-top: 15px;
+} */
+.resourcesUserBox {
+	height: 35px;
+	position: relative;
+	padding-left: 40px;
+	font-size: 12px;
+	line-height: 30px;
+	color: #B1B1B1;
+}
+
+.resourcesUserThum {
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.resourcesUserThum img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.resourcesUserName {
+	font-size: 12px;
+	line-height: 16px;
+	color: #B1B1B1;
+	margin-top: 5px;
+}
+
+.resourcesTime {
+	font-size: 12px;
+	line-height: 16px;
+	color: #909090;
+}
+
+.resourcesIntroductionBox {
+	font-size: 12px;
+	line-height: 20px;
+	color: #B1B1B1;
+	margin-top: 10px;
+}
+
+.resourcesStateBox {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100px;
+	text-align: right;
+	font-weight: bold;
+}
+.resourcesPubresourceBox{
+	position: absolute;
+	right: 0;
+	top: 25px;
+	width: 100px;
+	text-align: right;
+	font-weight: bold;
+}
+.resourcesStateColor1{
+	color: #E6A23C;
+}
+.resourcesStateColor2{
+	color: #F56C6C;
+}
+.resourcesStateColor3{
+	color: #1D7021;
+}
+.resourcesStateColor4{
+	color: #8B4513;
+}
+
+.FeedbackBox {
+	width: 100%;
+	height: 20px;
+	background-color: #161616;
+}
+
+.taskEditer {
+	width: 200px;
+}
+
+.taskEditerS {
+	width: 300px;
+}
+
+.taskEditer .el-input__inner {
+	padding: 0 5px;
+	height: 26px;
+}
+
+.setingDiskBox {
+	margin-top: 100px;
+}
+
+.setingDiskTitle {
+	text-align: center;
+	font-size: 16px;
+	line-height: 28px;
+	color: #B1B1B1;
+}
+
+.taskUploadProGress {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 160px;
+	height: 90px;
+}
+
+.taskUploadProGressBg {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 160px;
+	height: 90px;
+	background-color: #000000;
+	opacity: 0.5;
+}
+
+.taskUploadProGressCon {
+	width: 60px;
+	height: 60px;
+	margin: 0 auto;
+	margin-top: 16px;
+}
+
+.taskUploadProGressCon .el-progress__text {
+	color: #B1B1B1;
+}
+
+.taskFileListImg {
+	position: relative;
+}
+
+.taskFileListProGress {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+.taskFileListProGressBg {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: #000000;
+	opacity: 0.5;
+}
+
+.taskFileListProGressCon {
+	width: 60px;
+	height: 60px;
+	margin: 0 auto;
+	margin-top: 16px;
+}
+
+.taskFileListProGressCon .el-progress__text {
+	color: #B1B1B1;
+}
+
+.fileDialog {
+	display: flex;
+	left: 0;
+	top: 0;
+	width: 100px;
+	height: 100px;
+}
+
+/* .fileDialogBox {
+	min-height: 600px;
+} */
+
+
+.resourcesFeedBackTitle {
+	font-size: 14px;
+	font-weight: bold;
+	color: #2d8ceb;
+	line-height: 24px;
+	padding: 6px 0;
+	border-bottom: solid 1px #B1B1B1;
+}
+
+.feedbackListContent {
+	padding: 10px 0;
+	border-bottom: solid 1px #313131;
+}
+
+.feedbackUser {
+	height: 27px;
+	position: relative;
+	font-size: 12px;
+	line-height: 30px;
+	color: #B1B1B1;
+	padding: 7px 40px;
+	border-bottom: solid 1px #383838;
+	margin-bottom: 10px;
+}
+
+.feedbackUserThum {
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	left: 0;
+	top: 8px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.feedbackUserThum img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.feedbackUserName {
+	font-size: 12px;
+	line-height: 16px;
+	color: #B1B1B1;
+	margin-top: 5px;
+}
+
+.feedbackUserAddTime {
+	font-size: 12px;
+	line-height: 16px;
+	color: #909090;
+	position:absolute;
+	right: 0px;
+	top: 12px;
+}
+
+.feedbackListImg {
+	max-width: 200px;
+}
+
+.feedbackListImg img {
+	width: 100%;
+}
+
+.feedbackAddBox {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 49px;
+	background-color: #232323;
+	border-top: solid 1px #B1B1B1;
+	padding-top: 10px;
+}
+.feedbackAddIconBox{
+	position: absolute;
+	right: 0px;
+	top: 0;
+	width: 120px;
+	display: flex;
+	padding-top: 17px;
+}
+.feedbackAddInputBox{
+	padding-right: 130px;
+	padding-left: 10px;
+}
+.feedbackAddIconBtn{
+	display: flex;
+	margin: 0 5px;
+	flex-direction: column;
+}
+.feedbackAddIconBtn img{
+	display: block;
+	width:25px ;
+	height:25px ;
+}
+.feedbackAddInputBtn{
+	font-size: 16px;
+}
+
+.fileManageTitle{
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap
+}
+/* .fileManageContent{
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap
+} */
+.fileManageContentBox:hover{
+	background-color: #161616;
+}
+
+.taskStatisticalBox{
+	margin-top: 5px;
+}
+.taskStatisticalContent{
+	background-color: #161616;
+	border: solid 1px #313131;
+}
+.taskStatisticalList{
+	padding: 10px 0;
+	text-align: center;
+	position: relative;
+}
+.taskStatisticalNum{
+	font-size:14px ;
+	line-height:20px ;
+	font-weight: bold;
+	color: #2ea0de;
+}
+.taskStatisticalLabel{
+	font-size:12px ;
+	line-height:20px ;
+	color: #b1b1b1;
+}
+.taskStatisticalNumErr{
+	color: #cc2a1e;
+}
+.taskStatisticalListLine{
+	width: 1px;
+	height: 20px;
+	background-color: #b1b1b1;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin-top: -10px;
+}
+.taskTabsBox .el-tabs__item{
+	color: #b1b1b1;
+	line-height: 30px;
+	height: 30px;
+	font-size: 12px;
+}
+.taskTabsBox .el-tabs__item:hover{
+	color: #2d8ceb;
+}
+.taskTabsBox .el-tabs__item.is-active{
+	color: #2d8ceb;
+}
+.taskTabsBox .el-tabs__nav-wrap::after{
+	height: 1px;
+	background-color: #313131;
+}
+.taskTabsBox .el-tabs__active-bar{
+	height: 1px;
+}
+.taskTabsBox .el-tabs__header{
+	margin-bottom: 5px;
+}
+.taskAuditBox{
+	
+}
+.taskDetailePage{
+	border-top: solid 1px #313131;
+}
+.taskAuditList{
+	height: 24px;
+	border-bottom: solid 1px #2a2a2a;
+}
+.taskAuditList:hover{
+	background-color: #161616;
+}
+
+.taskAssetsNumbel{
+	font-size: 12px;
+	line-height: 24px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap
+}
+.taskUploadUser{
+	font-size: 12px;
+	line-height: 24px;
+	white-space:nowrap;
+	overflow:hidden;   
+	text-overflow:ellipsis;
+}
+.taskUploadTime{
+	font-size: 10px;
+	color: #6b6b6b;
+}
+.taskOperation{
+	text-align: center;
+}
+.taskOperation i{
+	margin: 0 3px;
+	padding: 5px;
+}
+.taskOperation i:hover{
+	background-color: #313131;
+}
+.taskOperation i.is-active{
+	background-color: #313131;
+}
+.taskAssetsSelect{
+	margin-right: 5px;
+}
+
+.resourcesListSelectionBtn{position: fixed;z-index: 999;right: 0px;bottom:100px}
+
+.newFeedBackQuill{padding-bottom: 50px;}
+.newFeedBackImg{max-width: 100%;}
+.newFeedBackImg img{width: 100%;}
+.newFeedBackContent{min-height: 240px;}
+.newFeedBackContentBtn{display: flex;flex-direction: row;justify-content: center;margin:15px 0;}
+.newFeedBackContentBtnMargin{margin: 0 10px;}
+.newPersonnelContent{width: 100%;margin-top: 15px 0;}
+.newPersonnelContent .el-select{width: 100%;}
+.roleJurisdictionTitle{font-weight: bold;margin-top:10px ;}
+.roleJurisdictionList{margin: 5px 0;}
+
+.fileDialogBox .el-tabs__item{color: #b1b1b1;}
+.fileDialogBox .el-tabs__item.is-active{color: #2d8ceb;}
+
+
+.myTaskBox {position: relative;height: 50px;}
+.myTaskDataBox {padding-left: 90px;position: relative;}
+.myTaskThum {width: 80px;position: absolute;left: 0;top: 0;z-index: 2;}
+.myTaskThum img {width: 80px;display: block;}
+.myTaskName {font-size: 14px;line-height: 22px;color: #2d8ceb;font-weight: bold;margin-bottom: 5px;}
+.myTaskTxt {line-height: 18px;}
+.myTaskBtn{position: absolute;right: 0px;top: 10px;}
+.taskOperation{text-align: right;}
+.makeTypeBox{margin-bottom: 16px;}
+.taskAssetsBox{position: relative;padding-left: 20px;}
+.taskAssetsColor{width: 13px;height: 13px;position: absolute;left: 0;top: 2px;}
+.taskAssetsColor0{background-color: #dfe373;}
+.taskAssetsColor1{background-color: #db1d8c;}
+.taskAssetsColor2{background-color: #45ba61;}
+.taskAssetsColor4{background-color: #a690e0;}
+.taskAssetsColor5{background-color: #8c431d;}
+
+.fileDialogTextBox{padding: 3px 10px;border-bottom: solid 1px #3c3c44;}
+.fileDialogTextBox:hover{background-color: #191919;}
+.fileDialogName{font-size: 12px;line-height: 22px;color: #63da64;}
+.fileDialogPath{font-size: 12px;line-height: 22px;color: #a3a4a8;}
+.fileDialogUser{font-size: 12px;line-height: 22px;color: #a3a4a8;}
+.fileDialogTime{color: #65666a;}
+
+/* .fileDialogText{overflow:hidden;text-overflow:ellipsis;white-space:nowrap} */
+.prresourcesRecordVideoStyle{padding: 0px 15px;}
+.prresourcesRecordVideoStyle img{width: 100%;display: block;}
+
+.prresourcesRecordVideoTextBox{margin-bottom: 15px;height: 57px;}
+.prresourcesRecordVideoTextStyle{padding: 0px 15px;overflow: hidden;text-overflow:ellipsis;white-space:nowrap;}
+.prresourcesRecordBox{margin-top: 15px;}
+
+.fileListBox{height: 400px;}
+
+.searchManageList{position: relative;padding: 10px 0;border-bottom: solid 1px #3c3c44;}
+.searchManageList:hover{background-color: #191919;}
+.fileManageList{position: relative;}
+.fileManageInfo{padding-right: 50px;}
+.fileManageName{font-size: 12px;line-height: 22px;color: #63da64;}
+.fileManagePath{font-size: 12px;line-height: 22px;color: #a3a4a8;}
+.fileManageSpeed{position: absolute;right: 0;top: 0;font-size: 12px;line-height: 45px;color: #a3a4a8;}
+.fileManageDescribe{font-size: 12px;line-height: 16px;color: #777474;}
+.fileManageList .el-progress-bar__outer{background-color: #3c3c44;}
+
+
+.fileManageSpeedBox{position: absolute;right: 0px;bottom: 0;}
+.fileManageSpeedTxt{font-size: 12px;line-height: 18px;color: #a3a4a8;}
+
+.taskHistoryList{padding: 5px 10px;border-bottom: solid 1px #3c3c44;}
+.taskHistoryList:hover{background-color: #191919;}
+.taskHistoryName{font-size: 12px;line-height: 22px;color: #63da64;}
+.taskHistoryUser{font-size: 12px;line-height: 22px;color: #a3a4a8;}
+
+.prErrTitle{font-size: 18px;line-height: 50px;color: #63da64;text-align: center;margin-top: 100px;font-weight: bold;}
+.prErrText{font-size: 14px;line-height: 28px;color: #a3a4a8;text-align: center;}
+
+.fileManagebtns{position: absolute;right: 0;top: 20px;}
+.fileManagebtns i{
+	margin: 0 3px;
+	padding: 5px;
+}
+.fileManagebtns i:hover{
+	background-color: #313131;
+}
+.fileManagebtns i.is-active{
+	background-color: #313131;
+}
+.sysLoadingTip{text-align: center;font-size:14px ;line-height:28px ;}
+.sysLoadingBoxBg{position: fixed;left: 0;top: 0;z-index: 999998;width: 100%;height: 100%;background-color: #ffffff;opacity: 0.3;}
+.sysLoadingBox{position: fixed;left: 0;top: 0;z-index: 999999;width: 100%;height: 100%;}
+.sysLoadingContent{width: 50%;position: absolute;left: 50%;top: 50%;margin-left: -25%;margin-bottom: -25%;}
+
+
+
+.projectSubStateList{margin-bottom: 20px;}
+.projectSubStateTitle{font-size: 14px;line-height: 28px;color: #b1b1b1;font-weight: bold;border-bottom: solid 1px #313131;position: relative;}
+.projectSubStateAdd{position: absolute;right: 0;top: 5px;width: 20px;height: 20px;text-align: center;line-height: 20px;}
+.projectSubStateAdd:hover{background-color: #161616;cursor: pointer;}
+.projectSubStateContent{padding: 10px 0;overflow: hidden;}
+.projectSubStateDetaile{float: left;width: 33%;position: relative;}
+.projectSubStateColor{width:20px;height: 20px;background-color: #29d698;position: absolute;left: 0;top: 2px;border-radius: 5px;}
+.projectSubStateDetaileP{padding: 0 30px;}
+.projectSubStateInput{height:24px ;}
+.projectSubStateTxt{font-size: 12px;line-height: 24px;color: #b1b1b1;}
+.projectSubStateTxtInput input{width: 100%;background-color: #161616;border: solid 1px #313131;font-size: 12px;line-height: 24px;color: #b1b1b1;padding:0 5px;border-radius: 5px;}
+.labelColorBox{width: 100%;overflow: hidden;display: flex;justify-content: center;flex-direction: row;flex-wrap: wrap;}
+.labelColorList{width: 40px;height: 40px;background-color: #29d698;margin: 20px;}
+
+
+.taskFucBox{position: absolute;right: 5px;top: 6px;}
+.fileXlsxBox{padding: 3px 10px;border-bottom: solid 1px #3c3c44;position: relative;}
+.fileXlsxBox:hover{background-color: #191919;}
+.fileErr{position: absolute;right: 0;top: 20px;color: #cb1a1c;}
+.taskFucBtn{float: left;width: 20px;height: 20px;margin-left: 10px;}
+.fileTip{position: absolute;left: 0;top: 0;}
+.newFeedBackContentBtn{position: relative;}
+.selectXlsxCountList{width: 100%;}
+.selectXlsxCountTip{text-align: center;}
+.selectXlsxCountTipH{color: #45ba61;}
+.selectXlsxCountTip{color: #65666a;}
+
+.stateListBox{position: relative;padding-left: 17px;}
+.stateListColor{width: 13px;height: 13px;position: absolute;left: 0;top: 5px;}
+
+.resTaskTitle{position: relative;left: 0;top: 0;font-size:14px ;line-height:48px ;color: #63da64;font-weight: bold;padding: 0 20px;border-bottom: solid 1px #3c3c44;}
+.resTaskTitleRight{position: absolute;right: 20px;top: 0;padding-right: 308px;}
+.resTaskTitleInput{position: absolute;right: 108px;top: 0;width:200px ;}
+.resTaskTitleBtns{position:absolute;right:0;top: 0;}
+.resTaskTitleRightT{margin-right: 10px;}
+.resTaskBox{padding: 0 20px;}
+.resTaskList{border-bottom: solid 1px #3c3c44;}
+.resTaskList:hover{background-color: #191919;}
+.resTaskListContent{position: relative;padding: 10px 0;padding-right:270px ;}
+.resTaskListTask{position: absolute;right: 270px;top: 0;}
+.resTaskListTaskBox{position: absolute;left: 0;top: 0;width: 240px;height:47px;background-color: #161616;padding: 10px 0;padding-left: 40px;}
+.resTaskListName{font-size:12px ;line-height:24px ;color: #63da64}
+.resTaskListPath{font-size:12px ;line-height:24px ;color: #a3a4a8}
+.resTaskListTaskNameImg{position: absolute;left: 10px;top:24px ;}
+.resTaskListTaskName{font-size:12px ;line-height:24px ;color: #63da64}
+.resTaskListTaskNode{font-size:12px ;line-height:24px ;color: #a3a4a8}
+.resTaskListTaskNo{font-size:12px ;line-height:24px ;color: #a3a4a8;margin-top: 10px;}
+.resTaskTitleRightT .el-checkbox{margin-right: 10px;}
+.resTaskCont{padding: 0 20px;font-size:12px ;line-height:36px ;color: #a3a4a8}
+
+
+
+
+
+.resDialogList{border-bottom: solid 1px #3c3c44;}
+.resDialogList:hover{background-color: #191919;}
+.resDialogListContent{position: relative;padding: 10px 0;padding-right:270px ;}
+.resDialogListTask{position: absolute;right: 270px;top: 0;}
+.resDialogListTaskBox{position: absolute;left: 0;top: 0;width: 240px;height:47px;background-color: #161616;padding: 10px 0;padding-left: 40px;}
+.resDialogListName{font-size:12px ;line-height:24px ;color: #63da64}
+.resDialogListPath{font-size:12px ;line-height:24px ;color: #a3a4a8}
+.resDialogListTaskNameImg{position: absolute;left: 10px;top:24px ;}
+.resDialogListTaskName{font-size:12px ;line-height:24px ;color: #63da64}
+.resDialogListTaskNode{font-size:12px ;line-height:24px ;color: #a3a4a8}
+.resDialogListTaskErr{font-size:12px ;line-height:24px ;color: #cb1a1c;margin-top: 10px;}
+.resDialogTitleRightT .el-checkbox{margin-right: 10px;}
+.resTaskCheckboxBtns{position: absolute;right: 300px;top: 0;width: 160px;}
+
+.ql-editor.ql-blank:before{
+	color:#444444
+}
+
+.taskContentBtns{background-color: #161616;border: solid 1px #313131;display: flex;flex-wrap: wrap;flex-direction: row;justify-content: flex-start;margin-bottom: 10px;}
+.tastProjectBtnList{width:32px ;height:31px;margin: 5px;}
+.tastProjectBtnList:hover{background-color: #232323;}
+.tastProjectBtn{width:22px ;height: 21px;padding: 5px;}
+.tastProjectBtn img{display: block;}
+
+.taskContentFcBtns{background-color: #161616;border: solid 1px #313131;margin-bottom: 10px;margin-top: 10px;}
+.taskContentFcTitle{font-size:12px ;line-height:24px ;color: #b1b1b1;margin-left: 10px;padding-top: 7px;}
+.taskContentFcBtnList{display: flex;flex-wrap: wrap;flex-direction: row;justify-content: flex-start;}
+.taskContentFcBtnBox{width:32px ;height:31px;margin: 5px;margin-left: 10px;}
+.taskContentFcBtnBox:hover{background-color: #232323;}
+.taskContentFcBtn{width:22px ;height: 21px;padding: 5px;}
+.taskContentFcBtn img{display: block;}
+
+
+.taskResName{overflow: hidden;text-overflow:ellipsis;white-space:nowrap;font-size: 12px;}
+.taskResUrl{overflow: hidden;text-overflow:ellipsis;white-space:nowrap;font-size: 12px;}
+.taskResBox{}
+.taskResBox .el-table td, .el-table th{padding: 3px 0;}
+
+.tipBtns{margin: 0 2px;}
+
+.selectCompanyBoxSelect{display: flex;flex-direction: column;justify-content: center;}
+
+.taskOutgoingTitleBox{position: relative;height: 30px;}
+.taskOutgoingState{position: absolute;right: 0;top: 0px;padding-right: 25px;}
+.taskOutgoingState .el-dropdown-link{margin-left:10px;}
+.taskOutgoingAddBtn{margin-top: 5px;}
+.taskOutgoingAddBtn img{display: block;width:23px ;height: 22px;position: absolute;top: 0;right: 0;}
+
+
+.taskOutgoingTableBox .el-table td, .el-table th{padding: 4px 0;}
+.taskOutgingStateColorBox{position: relative;}
+.taskOutgingStateColor{position: absolute;left: 0;top: 0;width: 6px;height: 30px ;}
+.taskOutgingStateColorText{padding-left: 10px;}
+
+.changeStateShowBox{width: 150px;height: 30px;position: fixed;}
+
+.prresourcesLabelBox{position: relative;padding: 15px 10px;min-height: 25px;border: solid 1px #B1B1B1;margin-top: 10px;}
+.prresourcesLabelTitle{position: absolute;width: 70px;left: 10px;top: 5px;font-size: 12px;line-height: 20px;}
+.prresourcesLabelContent{padding-left: 70px;}
+.prresourcesLabelTitleBtn .el-button--mini, .el-button--mini.is-round{padding: 5px;margin-left: 10px;}
+.prresourcesLabelBox .el-tag--mini{margin-right: 5px;}
+
