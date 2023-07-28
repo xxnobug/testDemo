@@ -1,11 +1,11 @@
 <template>
   <div :style="menuHei">
-    <iframe
+    <!-- <iframe
       src="http://ai.tgyc.com/"
       frameborder="0"
       width="100%"
       height="100%"
-    ></iframe>
+    ></iframe> -->
   </div>
 </template>;
 <script>

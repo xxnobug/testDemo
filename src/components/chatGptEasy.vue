@@ -43,7 +43,7 @@ export default {
       }
 
       this.loadingFlag = true;
-      let allcontent = [{ role: "user", value }];
+      let allcontent = [{ role: "user", content: value }];
       this.chatList.push({
         isMe: true,
         message: value,
@@ -60,39 +60,54 @@ export default {
         url: "https://api.nextweb.fun/openai/v1/chat/completions",
         // url: "https://api.openai.com/v1/completions",
         // url: "/api/generate",
-        data: {
-        
+        data: JSON.stringify({
+          frequency_penalty: 0,
           model: "gpt-3.5-turbo-0613",
-     
+          presence_penalty: 0,
+          stream: true,
+          temperature: 0.5,
+          top_p: 1,
           messages: allcontent,
-        },
+        }),
         headers: {
           "content-type": "application/json",
-          "Authorization":
+          Authorization:
             "Bearer ak-Bk5kyi0xsY2XzrRq4CPIa8YRpNGdr6IfPhzkAPMmk0pQwE4Y",
         },
       })
         .then((res) => {
           console.log(res);
-          chatList.push({
-            isMe: false,
-            message: res.data.choices[0].text.slice(
-              1,
-              res.data.choices[0].text.length
-            ),
+
+          const { data } = res;
+
+          const regex = /({.*?]})/g;
+
+          let messageArr = data.match(regex);
+          console.log(messageArr);
+          let messageText = ''
+          messageArr.forEach((v) => {
+            if (v.indexOf("choices") != -1) {
+              const json = JSON.parse(v);
+
+              const content =
+                json.choices[0].finish_reason != "stop"
+                  ? json.choices[0].delta.content
+                  : "";
+
+
+              messageText += content;
+            }
           });
-          loadingFlag.value = false;
-          searchValue.value = "";
+          console.log(messageText);
+          console.log("messageText");
+          this.chatList.push({
+            isMe:false,
+            message:messageText
+          })
+        
         })
         .catch((err) => {
-          chatList.push({
-            isMe: false,
-            err: true,
-            message: err,
-          });
-          console.log(err);
-          loadingFlag.value = false;
-          searchValue.value = "";
+         
         });
     },
   },
