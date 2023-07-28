@@ -1,15 +1,20 @@
 <template>
   <div>
-    <div style="height: 600px; overflow-y: auto; margin-bottom: 30px">
+    <div :style="chatListHeight" class="chatListStyle">
       <div v-for="item in chatList">
         <div style="text-align: left" class="chatlistStyle icons-list">
           <div v-if="!item.isMe">
-            <!-- <AndroidOutlined style="margin-right: 10px; color: #67c23a" /> -->
+            <span>
+              <i class="el-icon-cpu iconsize"></i>
+            </span>
             <span v-html="item.message" :style="item.err ? 'color:F56C6C' : ''">
             </span>
           </div>
           <div v-else style="margin: 10px 0">
-            <!-- <SmileOutlined style="margin-right: 10px; color: #f56c6c" /> -->
+            <span>
+              <i class="el-icon-user iconsize"></i>
+            </span>
+
             {{ item.message }}
           </div>
         </div>
@@ -19,9 +24,15 @@
       <el-input
         v-model="searchValue"
         placeholder="请输入你的问题"
-        :loading="loadingFlag"
-        @change="pressEnterHandel"
-      />
+        :disabled="loading"
+        @change="pressEnterHandel(searchValue)"
+      >
+        <el-button
+          slot="append"
+          :icon="loading ? 'el-icon-loading' : 'el-icon-position'"
+          @click="pressEnterHandel(searchValue)"
+        ></el-button>
+      </el-input>
     </div>
   </div>
 </template>;
@@ -30,24 +41,52 @@ import axios from "axios";
 export default {
   data() {
     return {
-      chatList: [],
+      chatList: [
+        {
+          isMe: false,
+          message: "我是一个AI模型,请尽情向我提问吧！",
+        },
+      ],
       searchValue: "",
-      loadingFlag: false,
+      loading: false,
+      chatListHeight: "height:" + (window.innerHeight - 120) + "px",
     };
   },
-  mounted() {},
+  mounted() {
+    window.onresize = () => {
+      this.chatListHeight = "height:" + (window.innerHeight - 120) + "px";
+    };
+  },
   methods: {
-    pressEnterHandel(value, event) {
+    pressEnterHandel(value) {
       if (value == "") {
         return;
       }
 
-      this.loadingFlag = true;
+      this.loading = true;
       let allcontent = [{ role: "user", content: value }];
+      let endArr = [];
+      this.chatList.forEach((el) => {
+        if (el.isMe) {
+          endArr.push({
+            role: "user",
+            content: el.message,
+          });
+        } else {
+          endArr.push({
+            role: "assistant",
+            content: el.message,
+          });
+        }
+      });
       this.chatList.push({
         isMe: true,
         message: value,
       });
+  
+
+     
+      let sendArr = endArr.concat(allcontent);
       const timestamp = Date.now();
 
       let content = {
@@ -67,7 +106,7 @@ export default {
           stream: true,
           temperature: 0.5,
           top_p: 1,
-          messages: allcontent,
+          messages: sendArr,
         }),
         headers: {
           "content-type": "application/json",
@@ -76,6 +115,11 @@ export default {
         },
       })
         .then((res) => {
+          this.chatList.push({
+            isMe: false,
+            message: "",
+          });
+
           console.log(res);
 
           const { data } = res;
@@ -84,7 +128,7 @@ export default {
 
           let messageArr = data.match(regex);
           console.log(messageArr);
-          let messageText = ''
+          let messageText = "";
           messageArr.forEach((v) => {
             if (v.indexOf("choices") != -1) {
               const json = JSON.parse(v);
@@ -94,24 +138,35 @@ export default {
                   ? json.choices[0].delta.content
                   : "";
 
-
-              messageText += content;
+              this.chatList[this.chatList.length - 1].message = this.chatList[
+                this.chatList.length - 1
+              ].message += content;
             }
           });
+
+          this.loading = false;
+          this.searchValue = ''
           console.log(messageText);
           console.log("messageText");
-          this.chatList.push({
-            isMe:false,
-            message:messageText
-          })
-        
         })
         .catch((err) => {
-         
+          this.loading = false;
         });
     },
   },
 };
 </script>
 <style scoped >
+.chatListStyle {
+  overflow-y: auto;
+  margin-bottom: 30px;
+}
+.iconsize {
+  font-size: 16px;
+  font-weight: 700;
+}
+.el-input__inner {
+  height: 60px;
+  line-height: 60px;
+}
 </style>

@@ -14,23 +14,32 @@ Vue.use(Print);
 Vue.config.productionTip = false
 Vue.use(ElementUI);
 
-import { UTable, UTableColumn } from 'umy-ui'
+import {
+  UTable,
+  UTableColumn
+} from 'umy-ui'
 Vue.component(UTable.name, UTable)
 Vue.component(UTableColumn.name, UTableColumn)
-
-
-    // import VideoPlayer from 'vue-video-player'
-    // require('video.js/dist/video-js.css')
-    // require('vue-video-player/src/custom-theme.css')
-    // Vue.use(VideoPlayer)
-    // const hls = require('videojs-contrib-hls')
-    // Vue.use(hls)
+// import VideoPlayer from 'vue-video-player'
+// require('video.js/dist/video-js.css')
+// require('vue-video-player/src/custom-theme.css')
+// Vue.use(VideoPlayer)
+// const hls = require('videojs-contrib-hls')
+// Vue.use(hls)
 Vue.prototype.$jsPlumb = jsPlumb.jsPlumb
 
 /* eslint-disable no-new */
 new Vue({
-    el: '#app',
-    router,
-    components: { App },
-    template: '<App/>'
+  el: '#app',
+  router,
+  components: {
+    App
+  },
+  template: '<App/>'
 })
+// 正式环境清除所有console.log
+if (process.env.NODE_ENV === 'production') {
+  if (window) {
+    window.console.log = function () {};
+  }
+}

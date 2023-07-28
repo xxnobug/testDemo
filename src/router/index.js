@@ -25,6 +25,7 @@ import aiindex from "@/components/aiindex";
 import moreitem from "@/components/moreitem";
 import moreTableitem from "@/components/moreTableitem";
 import chatGptEasyDemo from "@/components/chatGptEasy";
+import framePlayback from "@/components/framePlayback";
 
 Vue.use(Router);
 
@@ -39,6 +40,11 @@ export default new Router({
           path: "/chatGptEasy",
           name: "chatGptEasyDemo",
           component: chatGptEasyDemo
+        },
+        {
+          path: "/framePlayback",
+          name: "framePlayback",
+          component: framePlayback
         },
         {
           path: "/test",

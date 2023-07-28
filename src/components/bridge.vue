@@ -17,6 +17,7 @@
               <span slot="title">导航一</span>
             </template>
             <el-menu-item-group>
+           
               <el-menu-item index="/moreitem"> 万条数据滚动 </el-menu-item>
               <el-menu-item index="/moreTableitem"> 万条数据table </el-menu-item>
               <el-menu-item index="/test"> 单帧图片排查 </el-menu-item>
@@ -49,6 +50,7 @@
             <el-menu-item-group>
               <el-menu-item index="/HeightJs">js处理</el-menu-item>
               <el-menu-item index="/HeightCss">css处理</el-menu-item>
+              <el-menu-item index="/framePlayback"> 序列帧播放 </el-menu-item>
             </el-menu-item-group>
           </el-submenu>
           <!-- <el-submenu index="3">
